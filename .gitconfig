@@ -1,0 +1,2 @@
+[alias]
+  pull = !git pull && git submodule update 
