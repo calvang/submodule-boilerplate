@@ -1,2 +1,17 @@
 [alias]
-  pull = !git pull && git submodule update 
+  pull = !git pull && git submodule update
+  # Submodule commands
+  substatus = !git submodule foreach git status
+  sublog = !git submodule foreach 'git log --oneline'
+  subadd = !git submodule foreach git add
+  subcommit = !git submodule foreach git commit
+  subpush = !git submodule foreach git push
+  subpull = !git submodule foreach git pull
+
+  # Parent + Submodule commands
+  addall = !git subpush && git add
+  pullall = !git pull && git subpull
+  logall = !git log && git sublog
+  a = addall
+  l = logall
+
