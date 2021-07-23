@@ -29,7 +29,19 @@ git submodule add <repo-url>
 
 ### Managing Submodules from the Parent Repo
 
+When changing submodules from the parent repo, you must always push to the
+submodule repo before pushing to the parent repo. To do this, you can run
 
+```
+git submodule foreach <git command for each submodule, i.e. "git add .">
+```
+
+Whenever you pull from the parent repo, make sure you don't use an inconsistent
+version of the submodule by running
+
+```
+git submodule update
+```
 
 ## Git Aliases
 
@@ -37,6 +49,8 @@ To view or edit this repo's git aliases, go to `.gitconfig`.
 
 The `!git` string is a placeholder for the `git` command, and aliases execute
 multiple commands.
+
+This repo contains useful submodule commands as git aliases.
 
 ## Resources
 

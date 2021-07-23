@@ -1,5 +1,5 @@
 [alias]
-  pull = !git pull && git submodule update
+  p = !git pull && git submodule update
   # Submodule commands
   substatus = !git submodule foreach git status
   sublog = !git submodule foreach 'git log --oneline'
